@@ -7,7 +7,7 @@ class Searchresultthumb extends Component {
             <div onClick={this.props.onClickVideo} className="resultThumb">
                 <Row >
                     <Col sm={12}>
-                        <img src={this.props.youtubeData.thumbnail} alt="" style={{ border: "2px dotted pink" }} />
+                        <img src={this.props.youtubeData.thumbnail} alt="" />
                     </Col>
                     <Col sm={12}>
                         <h3>{this.props.youtubeData.title}</h3>

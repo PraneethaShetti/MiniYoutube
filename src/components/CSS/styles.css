@@ -1,0 +1,22 @@
+.searchBar{
+    margin: 10px 5px;
+    width: 80%;
+}
+.selectedVideo{
+    border: 2px solid black;
+    margin: 15px 0;
+    background-color: #fff;
+}
+.searchResult{
+    background: #dae0e9;
+}
+.resultDes{
+    border-top: 2px solid black;
+    border-bottom: 2px double black;
+    margin-bottom: 10px;
+}
+.quote{
+    color: #fff;
+    background: #747880;
+    margin: 15px;
+}

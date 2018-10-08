@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Col, Row, Grid } from 'react-bootstrap';
 import Searchresultthumb from './searchresultthumb';
+import './CSS/styles.css';
 const API_KEY = 'AIzaSyBcbdgVrYczp0g1gAdH8TKVx72eljduNsw';
 
 
@@ -89,12 +90,13 @@ class Mainframe extends Component {
                                 <Row>
                                     <Col>
                                         <div className="searchBtn">
-                                            <input type="text" placeholder="Search Youtube Video" value={this.state.searchedText} onChange={this.onSearchText.bind(this)} />
+                                            <h1 className="quote">Where words fail Music speaks...!!</h1>
+                                            <input className="searchBar" type="text" placeholder="Search Youtube Video" value={this.state.searchedText} onChange={this.onSearchText.bind(this)} />
                                             <button className="btn btn-primary searchbtn" onClick={this.getDataFromYoutube.bind(this)}><i className="fa fa-search"></i></button>
                                         </div>
                                     </Col>
                                     <Col>
-                                        <div className="selectedVideo" style={{ border: "2px solid yellow", display: this.state.showPlayer }}>
+                                        <div className="selectedVideo" style={{ display: this.state.showPlayer }}>
                                             <iframe width="100%" height="315" src={this.state.currentVideoId} title="playVideo" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                                             <h2>{this.state.currentVideo.title}</h2>
                                         </div>
@@ -103,6 +105,7 @@ class Mainframe extends Component {
                             </Col>
                             <Col xs={12} sm={12} md={4} lg={4}>
                                 <div className="searchResult">
+                                    <div className="resultDes"><h3>Top 10 results of your search.</h3></div>
                                     {
                                         this.state.currentResults.map((element, index) => {
                                             return <Searchresultthumb key={index} onClickVideo={this.clickListner.bind(this, element)} youtubeData={element} />

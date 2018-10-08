@@ -1,8 +1,10 @@
 {
   "name": "miniyoutube",
   "version": "0.1.0",
+  "homepage": "https://praneethashetti.github.io/MiniYoutube/",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
@@ -12,6 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
